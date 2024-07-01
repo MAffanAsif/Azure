@@ -1,0 +1,63 @@
+
+UK South
+1- resouce group=rg-dev-dinga
+tag: resource-group = rg-dev-dinga
+
+
+
+UK South
+
+
+2- vnet=vnet-dev-dinga
+
+subnet name
+name=snt-dev-dinga-frontend
+name=snt-dev-dinga-backend
+name=snt-dev-dinga-database
+
+
+
+Mine is working now
+Lesson learned today
+Whenever you edit file either using nano or 
+vi then run npm run build command again, copy contents to nginx path again
+then restart nginx and it worked
+
+
+First deploy nginx using below commands or you can see these commands in Linux lectures class notes shred by Aman sir in Github Sudo apt install nginx 
+Sudo systemctl status nginx
+Then on your frontend VM terminal copy your build folder files to nginx path /var/www/html by using copy command
+cp -r * /var/www/html
+After copying these files restart nginx 
+sudo systemctl restart nginx 
+Then on browser type your frontend public ip address to launch your new website.
+
+
+
+
+
+tag: virtual-network = vnet-dev-dinga
+
+3- virtual machine
+
+
+i: vm-dev-dinga-fe (Ubuntu)
+ii: vm-dev-dinga-be(Ubuntu)
+iii: db-dev-dinga-sql (SQL)
+
+
+tag: virtual-machine = dev-dinga-fe
+tag: virtual-machine = dev-dinga-be (Operating system
+Linux (ubuntu 20.04)
+tag: sql-server = dev-dinga-sql
+Allowed posrts:
+HTTP: 80, HTTPS: 443, SSH=22
+
+
+user: Admindevdinga
+pass: Password123@
+
+FE and BE Configuration:
+
+i- Backend
+PGNING
